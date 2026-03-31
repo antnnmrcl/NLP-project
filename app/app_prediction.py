@@ -75,7 +75,7 @@ if st.button("Analyze"):
 
         explainer = shap.LinearExplainer(model, tfidf.transform([clean]))
 
-        shap_values = explainer([clean])
+        shap_values = explainer(model)
 
         st.write("Top contributing words:")
 
